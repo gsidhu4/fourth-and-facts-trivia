@@ -34,7 +34,7 @@ function App() {
     if (lastPlayed && isSameDay(new Date(lastPlayed), today)) {
       setFinished(true);
     } else {
-      fetch('https://fourth-and-facts-trivia.onrender.com/')
+      fetch('https://fourth-and-facts-trivia.onrender.com/api/questions/daily')
         .then((res) => res.json())
         .then((data) => {
           setQuestions(data);
